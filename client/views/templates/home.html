@@ -1,0 +1,76 @@
+<template name="home">
+
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+      <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+    </button>
+    <div class="top-logo"><a class="navbar-brand" href="#">HK Tipster</a></div>
+  </nav>
+
+  <!-- TOP BANNER -->
+  <div class="container-home">
+    <div class="container-overlay">
+      <p class="container-text-1"> Next race on Wednesday May 5</p>
+      <p class="container-text-2"> Happy Valley race track</p>
+    </div>
+  </div>
+
+  <!-- TOP TIPSTERS -->
+  <div data-role="content" class="km-content km-widget km-scroll-wrapper km-insetcontent" style="overflow: hidden;">
+    <div class="km-scroll-header"></div>
+    <div class="km-scroll-container" style="-webkit-transform-origin: 0% 0%;">
+      <div class="km-listview-wrapper">
+        <ul data-role="listview" data-style="inset" data-type="group" class="km-widget km-listview km-listgroupinset">
+
+            <li class="km-group-container">
+              <div class="km-group-title">
+                <div class="km-text">
+                  Top Tipsters
+                </div>
+              </div>
+              <ul class="km-list">
+                  <li>
+                    <h2>Charlie Morris</h2>
+                    <img src="http://demos.telerik.com/kendo-ui/content/mobile/overview/nairobi.jpg" class="profile-pic">
+                    <p>Season winnings: $500,000</p>
+                  </li>
+                  <li>
+                    <h2>Mark Cheng</h2>
+                    <img src="http://demos.telerik.com/kendo-ui/content/mobile/overview/nairobi.jpg" class="profile-pic">
+                    <p>Season winnings: $450,000</p>
+                  </li>
+                    <li><h2>Anon 22</h2>
+                    <img src="http://demos.telerik.com/kendo-ui/content/mobile/overview/nairobi.jpg" class="profile-pic">
+                    <p>Season winnings: $430,000</p>
+                  </li>
+                    <li><h2>Trainer 3</h2>
+                    <img src="http://demos.telerik.com/kendo-ui/content/mobile/overview/nairobi.jpg" class="profile-pic">
+                    <p>Season winnings: $303,000</p>
+                  </li>
+                    <li><h2>Anil</h2>
+                    <img src="http://demos.telerik.com/kendo-ui/content/mobile/overview/nairobi.jpg" class="profile-pic">
+                    <p>Season winnings: $200,000</p>
+                  </li>
+                    <li><h2>Marco</h2>
+                    <img src="http://demos.telerik.com/kendo-ui/content/mobile/overview/nairobi.jpg" class="profile-pic">
+                    <p>Season winnings: $178,000</p>
+                  </li>
+              </ul>
+            </li>
+
+        </ul>
+      </div>
+    </div>
+
+  </div>
+
+<script>
+    var app = new kendo.mobile.Application(document.body);
+</script>
+
+
+</template>
