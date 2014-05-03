@@ -1,0 +1,65 @@
+<template name="raceday">
+
+<div id="content-container">
+
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <button type="button" class="navbar-toggle back-arrow">
+      <a href="/home" class="glyphicon glyphicon-arrow-left"></a>
+    </button>
+    <div class="top-logo"><a class="navbar-brand" href="#">Raceday</a></div>
+  </nav>
+
+
+  <!-- SLIDING CAROUSEL -->
+  <div id="raceday-carousel" class="carousel slide">
+
+    <ol class="carousel-indicators">
+      <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+      <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+      <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+    </ol>
+
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner">
+      <div class="item active">
+        <img src="http://placehold.it/900x500" alt="">
+        <div class="carousel-caption">
+          slide 1
+        </div>
+      </div>
+      <div class="item">
+        <img src="http://placehold.it/900x500" alt="">
+        <div class="carousel-caption">
+          slide 2
+        </div>
+      </div>
+      <div class="item">
+        <img src="http://placehold.it/900x500" alt="">
+        <div class="carousel-caption">
+          slide 3
+        </div>
+      </div>
+    </div>
+
+    <!-- Controls -->
+    <a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
+      <span class="icon-prev"></span>
+    </a>
+    <a class="right carousel-control" href="#carousel-example-generic" data-slide="next">
+      <span class="icon-next"></span>
+    </a>
+  </div>
+
+</div>
+
+<script>
+    var app = new kendo.mobile.Application(document.body);
+
+    $(document).ready(function() {
+      $('.carousel').carousel()
+    });
+</script>
+
+
+</template>

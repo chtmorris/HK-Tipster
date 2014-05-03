@@ -103,3 +103,22 @@ WHITE:  - #FFF
     font-size: 0.8em;
 }
 
+
+/*----- RACEDAY NAV -----*/
+.navbar-toggle.back-arrow{
+  border-color: hsla(0, 0%, 100%, 0) !important;
+  margin: -18px 0 -7px 0;
+}
+
+.glyphicon {
+  font-size: 25px;
+  padding-top: 20px;
+}
+
+
+/*----- RACEDAY CAROUSEL -----*/
+.carousel.slide {
+  margin-top: 49px;
+}
+
+
