@@ -1,0 +1,124 @@
+<template name="profile">
+<div data-role="view" id="tabstrip-profile" data-title="profile" data-layout="mobile-tabstrip">
+  <div class="profile-container">
+    <div class="col-xs-4 row-xs-12">
+      <img src="http://demos.telerik.com/kendo-ui/content/mobile/overview/nairobi.jpg">
+    </div>
+    <div class="col-xs-8 row-xs-12 profile-info-container">
+        <div class="col-xs-6">
+            <div class="profile-info profile-winnings-stats">$15k</div>
+            <div class="profile-info profile-winnings-title"> winnings</div>
+        </div>
+        <div class="col-xs-6">
+            <div class="profile-info profile-followers-stats">25</div>
+            <div class="profile-info profile-followers-title">followers </div>
+        </div>
+
+     <button type="submit" class="btn btn-default btn-followers">Follow +</button>
+    </div>
+    <div class="history-raceday-container btn btn-group btn-group-justified">
+      <div class="btn-group">
+        <button type="button" class="btn btn-default" data-toggle="button">History</button>
+      </div>
+      <div class="btn-group">
+        <button type="button" class="btn btn-default" data-toggle="button">Raceday</button>
+      </div>
+    </div>
+    <!-- SWITCH CODE -->
+ <!--    <div class="history-raceday-container" id="switch-home" data-init="mobileSwitchInit" data-title="profile settings">
+      <div class="col-xs-4">History</div>
+      <div class="col-xs-4"> <input data-role="switch" id="email-switch" checked="checked" /></div>
+      <div class="col-xs-4">Raceday</div> -->
+    <!-- </div> -->
+  </div>
+</div>
+
+
+
+
+
+
+
+<div data-role="layout" data-id="mobile-tabstrip">
+  <header data-role="header">
+    <div class="navbar navbar-default navbar-fixed-top row-fluid" role="navigation">
+      <button type="button" class="navbar-toggle back-arrow col-xs-5">
+        <a href="/home" class="glyphicon glyphicon-arrow-left"></a>
+      </button>
+      <div class="top-logo col-xs-4"><a class="navbar-brand" href="#">Username</a></div>
+      <div class="navbar-credits col-xs-3">$50</div>
+    </div>
+  </header>
+</div>
+
+<style scoped>
+    #tabstrip-profile h2 {
+        display: inline-block;
+        font-size: 1.1em;
+        margin: 1.5em 0 0 .7em;
+    }
+    #tabstrip-profile h2 span {
+        display: block;
+        clear: both;
+        font-size: 1.8em;
+        margin: .1em 0 0 0;
+    }
+    #tabstrip-profile img {
+        width: 5em;
+        height: 5em;
+        float: left;
+        margin: 1em;
+        border: 1px solid rgba(0,0,0,.2);
+        -webkit-border-radius: 4em;
+        border-radius: 4em;
+    }
+
+
+/*
+    #switch-home h2 {
+      display: inline-block;
+      font-size: 1.1em;
+      margin: 1.5em 0 0 .7em;
+    }
+    #switch-home h2 span {
+      display: block;
+      clear: both;
+      font-size: 1.8em;
+      margin: .1em 0 0 0;
+}
+    #switch-home img {
+      width: 5em;
+      height: 5em;
+      float: left;
+      margin: 1em;
+      border: 1px solid rgba(0,0,0,.2);
+      -webkit-border-radius: 4em;
+      border-radius: 4em;
+}*/
+
+</style>
+
+<script>
+    function mobileSwitchInit() {
+        $("#wink-switch").kendoMobileSwitch();
+
+        $("#subscription-switch").kendoMobileSwitch({
+            checked: true,
+            onLabel: "YES",
+            offLabel: "NO"
+        });
+    }
+
+  $(".btn-group > .btn").click(function(){
+      $(this).addClass("active");
+  });
+
+
+</script>
+
+<script>
+    var app = new kendo.mobile.Application(document.body);
+</script>
+
+
+</template>
