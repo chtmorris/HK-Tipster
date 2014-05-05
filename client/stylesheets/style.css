@@ -117,8 +117,9 @@ WHITE:  - #FFF
 
 
 /*----- RACEDAY CAROUSEL -----*/
-.carousel.slide {
-  margin-top: 49px;
+#owl-demo .item img{
+    display: block;
+    width: 100%;
+    height: auto;
 }
-
 
