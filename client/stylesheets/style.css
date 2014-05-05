@@ -117,9 +117,37 @@ WHITE:  - #FFF
 
 
 /*----- RACEDAY CAROUSEL -----*/
-#owl-demo .item img{
-    display: block;
-    width: 100%;
-    height: auto;
+.raceday-carousel{
+  margin: 50px 10px 0 10px;
+  font-family: 'Lato', sans-serif;
+  text-align: center;
+}
+
+.race-number{
+  font-size: 25px;
+  text-align: left;
+}
+
+.img-icon {
+  max-width: 60px;
+}
+
+.horse-icon{
+  width: 30px;
+  height: auto;
+}
+
+.horse-picks {
+  font-size: 18px;
+  padding-top: 22px !important;
+}
+
+.slick-dots li button:before {
+  font-size: 30px !important;
+}
+
+.scroll-it {
+  overflow: scroll;
+  height: 300px !important;
 }
 
