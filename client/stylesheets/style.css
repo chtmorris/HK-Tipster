@@ -151,3 +151,65 @@ WHITE:  - #FFF
   height: 300px !important;
 }
 
+
+/*----- LOGIN -----*/
+.login-page{
+  background-color: #1148e4;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0px;
+  left: 0px;
+  z-index: 1000;
+}
+
+.login-page-logo, .login-page-signin  {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  margin-top: -100px;
+  margin-left: -90px;
+}
+
+.login-page-logo {
+  margin-top: -160px;
+  margin-left: -90px;
+}
+
+.login-page-signin  {
+  margin-top: -90px;
+  margin-left: -64px;
+}
+
+.btn.btn-default {
+  background: white;
+  min-width: 130px;
+  color: black;
+}
+
+.btn.btn-primary{
+  background: hsla(0, 0%, 100%, 0.7);
+  min-width: 130px;
+  color: black;
+}
+
+.alert.alert-danger {
+  padding: 0 !important;
+}
+
+div.dropdown-menu {
+  background-color: #1148e4;
+  padding: 0 !important;
+  margin: 30px 0px 0 -98px;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  border: none;
+}
+
+.form-control {
+  padding: 0;
+}
+
+#forgot-password-link, #signup-link {
+  color: white;
+}

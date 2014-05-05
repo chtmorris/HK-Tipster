@@ -9,3 +9,5 @@ insecure
 bootstrap-3
 iron-router
 slick
+accounts-password
+accounts-ui-bootstrap-3
