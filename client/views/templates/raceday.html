@@ -1,0 +1,51 @@
+<template name="raceday">
+
+<div id="content-container">
+
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <button type="button" class="navbar-toggle back-arrow">
+      <a href="/home" class="glyphicon glyphicon-arrow-left"></a>
+    </button>
+    <div class="top-logo"><a class="navbar-brand" href="#">Raceday</a></div>
+  </nav>
+
+
+  <!-- SLIDING CAROUSEL -->
+  <div id="owl-demo" class="owl-carousel owl-theme">
+
+  <div class="item"><img src="http://www.funchap.com/wp-content/uploads/2014/02/White-Running-Horse-Wallpaper-HD.jpg" alt="The Last of us"> </div>
+  <div class="item"><img src="http://img2.wikia.nocookie.net/__cb20130104104610/elderscrolls/images/b/b6/HorseArmorElven.png" alt="GTA V"></div>
+  <div class="item"><img src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcSyS37F8-5_MM2bhOQz54ndqe6sGZdMDX7TlvMRkSXyi3CJHi48_A" alt="Mirror Edge"></div>
+
+</div>
+
+</div>
+
+<script>
+
+var app = new kendo.mobile.Application(document.body);
+
+$(document).ready(function() {
+  console.log("yoyo");
+  $("#owl-demo").owlCarousel({
+
+      navigation : true, // Show next and prev buttons
+      slideSpeed : 300,
+      paginationSpeed : 400,
+      singleItem:true
+
+      // "singleItem:true" is a shortcut for:
+      // items : 1,
+      // itemsDesktop : false,
+      // itemsDesktopSmall : false,
+      // itemsTablet: false,
+      // itemsMobile : false
+
+  });
+
+});
+</script>
+
+
+</template>
