@@ -161,7 +161,6 @@ WHITE:  - #FFF
   height: 300px !important;
 }
 
-<<<<<<< HEAD
 
 /*----- LOGIN -----*/
 .login-page{
@@ -224,7 +223,8 @@ div.dropdown-menu {
 #forgot-password-link, #signup-link {
   color: white;
 }
-=======
+
+
 /*----- PROFILE VIEW -----*/
 
 .profile-container {
@@ -281,8 +281,3 @@ div.dropdown-menu {
 .active{
   background-color: red;
 }
-
-
-
-
->>>>>>> 50d6655b8e3ff1ac20811c802cf58229441aea90
