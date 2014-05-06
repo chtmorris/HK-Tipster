@@ -1,9 +1,9 @@
 if (Meteor.isClient) {
-  Template.hello.greeting = function () {
+  Template.login.greeting = function () {
     return "Welcome to hktipster.";
   };
 
-  Template.hello.events({
+  Template.login.events({
     'click input': function () {
       // template data, if any, is available in 'this'
       if (typeof console !== 'undefined')
