@@ -139,12 +139,18 @@ WHITE:  - #FFF
 }
 
 .img-icon {
-  max-width: 60px;
+  max-width: 60px !important;
 }
 
-.horse-icon{
-  width: 30px;
-  height: auto;
+.img-icon-profile{
+  /*margin: -20px 0 0 0 !important;
+  padding: 0;*/
+}
+
+.horse-icon, .horse-icon-profile {
+  width: 30px !important;
+  height: auto !important;
+  border: none !important;
 }
 
 .horse-picks {
@@ -159,6 +165,22 @@ WHITE:  - #FFF
 .scroll-it {
   overflow: scroll;
   height: 300px !important;
+}
+
+
+/*----- HORSE PICKS -----*/
+.horse-icon-profile{
+margin: 0 !important;
+}
+
+.tip-input{
+  max-width: 30px;
+}
+
+#submit {
+  margin: 0 0 20px 40%;
+  background-color: #1148e4;
+  color: white;
 }
 
 

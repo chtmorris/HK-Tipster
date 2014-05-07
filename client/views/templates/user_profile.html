@@ -1,13 +1,80 @@
 <template name="racedayInput">
+
   <div>
-   <form id="myform">
-        <input type="text" name="horse1" placeholder="horse1"/>
-        <input type="text" name="horse2" placeholder="horse2"/>
-        <input type="text" name="horse3" placeholder="horse3"/>
-        <input type="submit" id="submit"/>
+    <form id="myform">
+      <table class="table">
+        <thead>
+          <th class="img-icon"></th>
+          <th class="img-icon-profile"><img src="img/horse-icon.png" class="horse-icon-profile"></th>
+          <th class="img-icon2-profile"><img src="img/horse-icon.png" class="horse-icon-profile"></th>
+          <th class="img-icon2-profile"><img src="img/horse-icon.png" class="horse-icon-profile"></th>
+          <th class="img-icon2-profile"><img src="img/horse-icon.png" class="horse-icon-profile"></th>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="horse-picks">Race 1</td>
+            <td class="horse-picks"><input type="text" name="horse1_race1" class="tip-input"/></td>
+            <td class="horse-picks"><input type="text" name="horse2_race1" class="tip-input"/></td>
+            <td class="horse-picks"><input type="text" name="horse3_race1" class="tip-input"/></td>
+            <td class="horse-picks"><input type="text" name="horse4_race1" class="tip-input"/></td>
+          </tr>
+          <tr>
+            <td class="horse-picks">Race 2</td>
+            <td class="horse-picks"><input type="text" name="horse1_race2" class="tip-input"/></td>
+            <td class="horse-picks"><input type="text" name="horse2_race2" class="tip-input"/></td>
+            <td class="horse-picks"><input type="text" name="horse3_race2" class="tip-input"/></td>
+            <td class="horse-picks"><input type="text" name="horse4_race2" class="tip-input"/></td>
+          </tr>
+          <tr>
+            <td class="horse-picks">Race 3</td>
+            <td class="horse-picks"><input type="text" name="horse1_race3" class="tip-input"/></td>
+            <td class="horse-picks"><input type="text" name="horse2_race3" class="tip-input"/></td>
+            <td class="horse-picks"><input type="text" name="horse3_race3" class="tip-input"/></td>
+            <td class="horse-picks"><input type="text" name="horse4_race3" class="tip-input"/></td>
+          </tr>
+          <tr>
+            <td class="horse-picks">Race 4</td>
+            <td class="horse-picks"><input type="text" name="horse1_race4" class="tip-input"/></td>
+            <td class="horse-picks"><input type="text" name="horse2_race4" class="tip-input"/></td>
+            <td class="horse-picks"><input type="text" name="horse3_race4" class="tip-input"/></td>
+            <td class="horse-picks"><input type="text" name="horse4_race4" class="tip-input"/></td>
+          </tr>
+          <tr>
+            <td class="horse-picks">Race 5</td>
+            <td class="horse-picks"><input type="text" name="horse1_race5" class="tip-input"/></td>
+            <td class="horse-picks"><input type="text" name="horse2_race5" class="tip-input"/></td>
+            <td class="horse-picks"><input type="text" name="horse3_race5" class="tip-input"/></td>
+            <td class="horse-picks"><input type="text" name="horse4_race5" class="tip-input"/></td>
+          </tr>
+          <tr>
+            <td class="horse-picks">Race 6</td>
+            <td class="horse-picks"><input type="text" name="horse1_race6" class="tip-input"/></td>
+            <td class="horse-picks"><input type="text" name="horse2_race6" class="tip-input"/></td>
+            <td class="horse-picks"><input type="text" name="horse3_race6" class="tip-input"/></td>
+            <td class="horse-picks"><input type="text" name="horse4_race6" class="tip-input"/></td>
+          </tr>
+          <tr>
+            <td class="horse-picks">Race 7</td>
+            <td class="horse-picks"><input type="text" name="horse1_race7" class="tip-input"/></td>
+            <td class="horse-picks"><input type="text" name="horse2_race7" class="tip-input"/></td>
+            <td class="horse-picks"><input type="text" name="horse3_race7" class="tip-input"/></td>
+            <td class="horse-picks"><input type="text" name="horse4_race7" class="tip-input"/></td>
+          </tr>
+          <tr>
+            <td class="horse-picks">Race 8</td>
+            <td class="horse-picks"><input type="text" name="horse1_race8" class="tip-input"/></td>
+            <td class="horse-picks"><input type="text" name="horse2_race8" class="tip-input"/></td>
+            <td class="horse-picks"><input type="text" name="horse3_race8" class="tip-input"/></td>
+            <td class="horse-picks"><input type="text" name="horse4_race8" class="tip-input"/></td>
+          </tr>
+        </tbody>
+      </table>
+      <button type="submit" id="submit" class="btn btn-primary">Submit</button>
     </form>
   </div>
+
 </template>
+
 
 <template name="history">
   <div>
@@ -15,6 +82,7 @@
    <!--  {{# each}} -->
   </div>
 </template>
+
 
 <template name="userProfile">
   {{#if isTrue}}
