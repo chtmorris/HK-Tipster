@@ -1,0 +1,1 @@
+Tips = new Meteor.Collection('tips');
