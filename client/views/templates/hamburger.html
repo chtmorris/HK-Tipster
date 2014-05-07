@@ -1,0 +1,43 @@
+<template name="hamburger">
+
+  <div id="drawer">
+    <ul data-role="listview" data-type="group">
+      <li>HK Tipster
+        <ul>
+          <li data-icon="home"><a href="#drawer-home" data-transition="none">Home</a></li>
+          <li data-icon="contacts"><a href="#drawer-starred" data-transition="none">Profile</a></li>
+          <li data-icon="action"><a href="/raceday">Race day summary</a></li>
+          <li data-icon="cart"><a href="#drawer-deleted" data-transition="none">Add credit</a></li>
+          <li data-icon="about"><a href="#drawer-drafts" data-transition="none">About</a></li>
+          <li data-icon=""><a href="/">Log out</a></li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+
+<script>
+    $(function() {
+        $("#drawer").kendoMobileDrawer({
+            container: "#content-container"
+        });
+
+        $("#drawer-trigger").click(function() {
+            $("#drawer").data("kendoMobileDrawer").show();
+            return false;
+        });
+
+        $(".drawer-link").click(function() {
+            $("#drawer").data("kendoMobileDrawer").hide();
+            $(".drawer-link").removeClass("active");
+            $(this).addClass("active");
+            return false;
+        });
+
+        $(".drawer-link").click(function(){
+              $(".inner-content").hide();
+              $("#"+$(this).data("target")).show();
+        });
+    });
+</script>
+
+</template>

@@ -1,0 +1,28 @@
+<template name="racedayInput">
+  <div>
+    <form action="" method="post">
+      <label for="POST-name">Race 1:</label>
+      <input id="POST-name" type="text" name="name">
+      <input type="submit" value="Save">
+    </form>
+  </div>
+</template>
+
+<template name="history">
+  <div>
+    History
+   <!--  {{# each}} -->
+  </div>
+</template>
+
+<template name="userProfile">
+  {{#if isTrue}}
+  <div>
+    {{> racedayInput}}
+  </div>
+  {{else}}
+  <div>
+    {{> history}}
+  </div>
+  {{/if}}
+</template>

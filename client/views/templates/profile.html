@@ -1,4 +1,5 @@
 <template name="profile">
+
 <div data-role="view" id="tabstrip-profile" data-title="profile" data-layout="mobile-tabstrip">
   <div class="profile-container">
     <div class="col-xs-4 row-xs-12">
@@ -18,27 +19,26 @@
     </div>
     <div class="history-raceday-container btn btn-group btn-group-justified">
       <div class="btn-group">
-        <button type="button" class="btn btn-default" data-toggle="button">History</button>
+        <button id="history-button" type="button" class="btn btn-default" data-toggle="button">History</button>
       </div>
       <div class="btn-group">
-        <button type="button" class="btn btn-default" data-toggle="button">Raceday</button>
+        <button id="raceday-button" type="button" class="btn btn-default" data-toggle="button">Raceday</button>
       </div>
     </div>
-    <!-- SWITCH CODE -->
- <!--    <div class="history-raceday-container" id="switch-home" data-init="mobileSwitchInit" data-title="profile settings">
-      <div class="col-xs-4">History</div>
-      <div class="col-xs-4"> <input data-role="switch" id="email-switch" checked="checked" /></div>
-      <div class="col-xs-4">Raceday</div> -->
-    <!-- </div> -->
   </div>
+    <div>
+      {{> userProfile }}
+    </div>
+</div>
+  <!-- RACEDAY TABLE -->
+<div id="raceday-input">
+
+
 </div>
 
 
 
-
-
-
-
+<!-- NAV BAR -->
 <div data-role="layout" data-id="mobile-tabstrip">
   <header data-role="header">
     <div class="navbar navbar-default navbar-fixed-top row-fluid" role="navigation">
@@ -73,49 +73,17 @@
         border-radius: 4em;
     }
 
-
-/*
-    #switch-home h2 {
-      display: inline-block;
-      font-size: 1.1em;
-      margin: 1.5em 0 0 .7em;
-    }
-    #switch-home h2 span {
-      display: block;
-      clear: both;
-      font-size: 1.8em;
-      margin: .1em 0 0 0;
-}
-    #switch-home img {
-      width: 5em;
-      height: 5em;
-      float: left;
-      margin: 1em;
-      border: 1px solid rgba(0,0,0,.2);
-      -webkit-border-radius: 4em;
-      border-radius: 4em;
-}*/
-
 </style>
 
+
 <script>
-    function mobileSwitchInit() {
-        $("#wink-switch").kendoMobileSwitch();
+  $(document).ready(function() {
 
-        $("#subscription-switch").kendoMobileSwitch({
-            checked: true,
-            onLabel: "YES",
-            offLabel: "NO"
-        });
-    }
 
-  $(".btn-group > .btn").click(function(){
-      $(this).addClass("active");
+
   });
 
-
 </script>
-
 <script>
     var app = new kendo.mobile.Application(document.body);
 </script>
