@@ -222,13 +222,13 @@ div.dropdown-menu {
 
 #forgot-password-link, #signup-link {
   color: white;
-}
 
 
 /*----- PROFILE VIEW -----*/
 
 .profile-container {
   margin-top: 50px;
+  /*position: fixed;*/
 
 }
 
@@ -278,6 +278,10 @@ div.dropdown-menu {
   padding-left: 10px;
   padding-right: 10px;
 }
-.active{
-  background-color: red;
+.active {
+  background-color: red !important;
 }
+
+
+
+
