@@ -48,7 +48,7 @@ WHITE:  - #FFF
 
 .navbar-credits{
   text-align: right;
-  font-size: 30px;
+  font-size: 20px;
 
 }
 
@@ -143,8 +143,7 @@ WHITE:  - #FFF
 }
 
 .img-icon-profile{
-  /*margin: -20px 0 0 0 !important;
-  padding: 0;*/
+  /*padding-left: 113px;*/
 }
 
 .horse-icon, .horse-icon-profile {
@@ -170,17 +169,30 @@ WHITE:  - #FFF
 
 /*----- HORSE PICKS -----*/
 .horse-icon-profile{
-margin: 0 !important;
+  margin: 0 !important;
 }
 
 .tip-input{
-  max-width: 30px;
+  max-width: 38px;
+  font-size: 0.9em;
 }
 
 #submit {
-  margin: 0 0 20px 40%;
+  margin: -110px 0 0px 5px;
   background-color: #1148e4;
   color: white;
+}
+
+.horse1-tip {
+  margin-left: 105px
+}
+
+.img-icon-profile {
+  padding-left: 113px !important;
+}
+
+.new-row {
+  margin-top: -25px;
 }
 
 
@@ -215,13 +227,13 @@ margin: 0 !important;
 
 .btn.btn-default {
   background: white;
-  min-width: 130px;
+  min-width: 30px;
   color: black;
 }
 
 .btn.btn-primary{
   background: hsla(0, 0%, 100%, 0.7);
-  min-width: 130px;
+  min-width: 30px;
   color: black;
 }
 
