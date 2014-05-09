@@ -18,7 +18,7 @@ Template.profile.events({
   }
 });
 
-Template.racedayInput.events({'submit form' : function(event, template) {
+Template.racedayInput.events({'submit form#form1' : function(event, template) {
   event.preventDefault();
 
   horse1_race1 = template.find("input[name=horse1_race1]");
@@ -116,9 +116,6 @@ Template.racedayInput.events({'submit form' : function(event, template) {
       }
     };
 
-
-  console.log(data);
-
   horse1_race1.value="";
   horse2_race1.value="";
   horse3_race1.value="";
@@ -160,7 +157,41 @@ Template.racedayInput.events({'submit form' : function(event, template) {
   horse4_race8.value="";
 
   Meteor.users.update({_id:Meteor.user()._id}, {$set:{"profile.race":data}});
+  // Meteor.users.update({_id:Meteor.user()._id}, {$set:{"profile.score": 100}});
+
+  compute_score();
 
 }});
 
+
+var compute_score = function() {
+
+  var user_horse_selection = [1, 2, 3, 4];
+  var high_score = Meteor.user().profile.score;
+  console.log(high_score);
+  var race = Results.findOne().Race1;
+
+  // LOOP THROUGH ALL TYPES OF PAYOUTS
+  for (payout in race) {
+
+    console.log(payout.win);
+
+
+      //  IF WINNING COMBO MATCHES USER SELECTION
+            // IF DIVIDEND OF WINNING COMBO IS GREATER THAN high_score
+            //   HIGH_SCORE = DIVIDEND
+  }
+
+}
+
+
+
+
 // Meteor.users.update({_id:Meteor.user()._id}, {$set:{"profile.race":{"race_1": "5", "race_2":"10"}}})
+
+// Results.find().fetch().dividend
+// undefined
+// Results.findOne().dividend
+// "599.5"
+// Results.find().fetch()[0].dividend
+// "599.5"
