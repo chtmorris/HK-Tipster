@@ -56,6 +56,7 @@ WHITE:  - #FFF
   text-align: left;
 }
 
+
 /*----- HOME CONTAINER -----*/
 .container-home {
   min-height: 150px;
@@ -140,10 +141,6 @@ WHITE:  - #FFF
 
 .img-icon {
   max-width: 60px !important;
-}
-
-.img-icon-profile{
-  /*padding-left: 113px;*/
 }
 
 .horse-icon, .horse-icon-profile {
@@ -258,12 +255,32 @@ div.dropdown-menu {
   color: white;
 }
 
+
 /*----- PROFILE VIEW -----*/
+
+#tabstrip-profile h2 {
+  display: inline-block;
+  font-size: 1.1em;
+  margin: 1.5em 0 0 .7em;
+}
+#tabstrip-profile h2 span {
+  display: block;
+  clear: both;
+  font-size: 1.8em;
+  margin: .1em 0 0 0;
+}
+#tabstrip-profile img {
+  width: 5em;
+  height: 5em;
+  float: left;
+  margin: 1em;
+  border: 1px solid rgba(0,0,0,.2);
+  -webkit-border-radius: 4em;
+  border-radius: 4em;
+}
 
 .profile-container {
   margin-top: 50px;
-  /*position: fixed;*/
-
 }
 
 .profile-info-container {
@@ -282,20 +299,12 @@ div.dropdown-menu {
   padding-bottom: 4px;
 }
 
-
-.profile-winnings-stats{
+.profile-winnings-stats, .profile-followers-stats {
   font-size: 15px
-
 }
 
 .profile-followers-title{
   font-size: 12px;
-
-}
-
-.profile-followers-stats{
-  font-size: 15px;
-
 }
 
 .btn-followers{
@@ -312,10 +321,9 @@ div.dropdown-menu {
   padding-left: 10px;
   padding-right: 10px;
 }
-.active {
-  background-color: red !important;
+
+.btn.btn-default.active {
+  background-color: #e4d611;
 }
-
-
 
 
