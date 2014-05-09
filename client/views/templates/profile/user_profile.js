@@ -2,10 +2,6 @@ Template.userProfile.isTrue = function() {
   return Session.get('isTrue');
 };
 
-// Template.history.list = function() {
-//   Histories
-// }
-
 Template.profile.events({
   'click #raceday-button' : function (e, template){
     // alert("raceday");

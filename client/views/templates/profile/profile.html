@@ -6,16 +6,16 @@
       <img src="http://demos.telerik.com/kendo-ui/content/mobile/overview/nairobi.jpg">
     </div>
     <div class="col-xs-8 row-xs-12 profile-info-container">
-        <div class="col-xs-6">
-            <div class="profile-info profile-winnings-stats">$15k</div>
-            <div class="profile-info profile-winnings-title"> winnings</div>
-        </div>
-        <div class="col-xs-6">
-            <div class="profile-info profile-followers-stats">25</div>
-            <div class="profile-info profile-followers-title">followers </div>
-        </div>
-
-     <button type="submit" class="btn btn-default btn-followers">Follow +</button>
+      <div class="col-xs-6">
+          <div class="profile-info profile-winnings-stats">$15k</div>
+          <div class="profile-info profile-winnings-title"> winnings</div>
+      </div>
+      <div class="col-xs-6">
+          <div class="profile-info profile-followers-stats">25</div>
+          <div class="profile-info profile-followers-title">followers </div>
+      </div>
+      {{> followbar }}
+      {{> editbar }}
     </div>
     <div class="history-raceday-container btn btn-group btn-group-justified">
       <div class="btn-group">
@@ -30,12 +30,6 @@
       {{> userProfile }}
     </div>
 </div>
-  <!-- RACEDAY TABLE -->
-<div id="raceday-input">
-
-
-</div>
-
 
 
 <!-- NAV BAR -->
@@ -51,38 +45,14 @@
   </header>
 </div>
 
-<style scoped>
-    #tabstrip-profile h2 {
-        display: inline-block;
-        font-size: 1.1em;
-        margin: 1.5em 0 0 .7em;
-    }
-    #tabstrip-profile h2 span {
-        display: block;
-        clear: both;
-        font-size: 1.8em;
-        margin: .1em 0 0 0;
-    }
-    #tabstrip-profile img {
-        width: 5em;
-        height: 5em;
-        float: left;
-        margin: 1em;
-        border: 1px solid rgba(0,0,0,.2);
-        -webkit-border-radius: 4em;
-        border-radius: 4em;
-    }
 
-</style>
-
+<!-- SCRIPT -->
 <script>
   $(document).ready(function() {
   });
-
 </script>
 <script>
     var app = new kendo.mobile.Application(document.body);
 </script>
-
 
 </template>
