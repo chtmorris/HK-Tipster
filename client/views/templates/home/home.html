@@ -35,32 +35,11 @@
               </div>
             </div>
             <ul class="km-list">
-              <li>
-                <h2>Charlie Morris</h2>
-                <img src="http://images.ak.instagram.com/profiles/profile_4829269_75sq_1307441458.jpg" class="profile-pic">
-                <p>Season winnings: $500,000</p>
-              </li>
-              <li>
-                <h2>Mark Cheng</h2>
-                <img src="http://images.ak.instagram.com/profiles/profile_426118112_75sq_1371752161.jpg" class="profile-pic">
-                <p>Season winnings: $450,000</p>
-              </li>
-                <li><h2>Anon 22</h2>
-                <img src="http://demos.telerik.com/kendo-ui/content/mobile/overview/nairobi.jpg" class="profile-pic">
-                <p>Season winnings: $430,000</p>
-              </li>
-                <li><h2>Trainer 3</h2>
-                <img src="http://demos.telerik.com/kendo-ui/content/mobile/overview/nairobi.jpg" class="profile-pic">
-                <p>Season winnings: $303,000</p>
-              </li>
-                <li><h2>Anil</h2>
-                <img src="http://demos.telerik.com/kendo-ui/content/mobile/overview/nairobi.jpg" class="profile-pic">
-                <p>Season winnings: $200,000</p>
-              </li>
-                <li><h2>Marco</h2>
-                <img src="http://demos.telerik.com/kendo-ui/content/mobile/overview/nairobi.jpg" class="profile-pic">
-                <p>Season winnings: $178,000</p>
-              </li>
+
+              {{#each tipster}}
+                {{> tipsterList}}
+              {{/each}}
+
             </ul>
           </li>
         </ul>
@@ -69,7 +48,8 @@
   </div>
 
 </div>
-  {{> hamburger}}
+
+{{> hamburger}}
 
 <script>
     var app = new kendo.mobile.Application(document.body);
