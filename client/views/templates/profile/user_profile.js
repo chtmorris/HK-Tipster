@@ -223,3 +223,107 @@ Template.racedayInput.events({'submit form#race-8' : function(event, template) {
   Meteor.users.update({_id:Meteor.user()._id}, {$set:{"profile.race.raceDate.race8":data}});
 
 }});
+
+// function should pass in the Race_Date, Race Number, User_ID
+var compute_score = function() {
+
+  // initialize parameters
+  var user_horse_selection = [1, 5, 3, 7];
+  var high_score = 0;
+  var user_score = Meteor.user().profile.score;
+  var score_array = [];
+
+  var win = Results.findOne().Race1.win;
+  var place = Results.findOne().Race1.place;
+  var quinella = Results.findOne().Race1.quinella;
+  var quinella_place = Results.findOne().Race1.quinella_place;
+  var tierce = Results.findOne().Race1.tierce;
+  var trio = Results.findOne().Race1.trio;
+  var first_4 = Results.findOne().Race1.first_4;
+  var quartet = Results.findOne().Race1.quartet;
+  var test = Results.findOne().Race1.test;
+
+  console.log(high_score);
+
+  // CHECK WIN
+  for (key in user_horse_selection) {
+    if (_.contains(win.win_combo, user_horse_selection[key])) {
+      if (high_score < win.dividend) {
+        high_score = win.dividend;
+        console.log(user_horse_selection[key] + " won WIN.  The payout is " + win.dividend);
+      }
+     }
+  }
+
+
+  // CHECK PLACE
+  var place_score = 0;
+
+  for (key in user_horse_selection) {
+    for (entry in place) {
+      if (_.contains(place[entry].win_combo, user_horse_selection[key])) {
+        place_score += place[entry].dividend;
+        if (high_score < place_score) {
+          high_score = place_score;
+          console.log(user_horse_selection[key] + " won PLACE.  The dividend is " + place[entry].dividend);
+        }
+      }
+    }
+  }
+
+  if (place_score > 0) {
+  console.log("Total payout for place is " + place_score);
+  place_score = 0;
+  }
+
+  // CHECK QUINELLA
+  if ( (_.contains(user_horse_selection, quinella.win_combo[0])) && (_.contains(user_horse_selection, quinella.win_combo[1])) ) {
+
+    console.log('success');
+    if (high_score < quinella.dividend) {
+      high_score = quinella.dividend;
+      console.log(quinella.win_combo[0] + " and " + quinella.win_combo[1] + " won WIN.  The payout is " + quinella.dividend);
+    }
+  }
+
+  // CHECk QUINELLA_PLACE
+  for (entry in quinella_place) {
+
+    if ((_.contains(user_horse_selection, quinella_place[entry].win_combo[0])) && (_.contains(user_horse_selection, quinella_place[entry].win_combo[1]))) {
+
+      if (high_score < quinella_place[entry].dividend) {
+        high_score = quinella_place[entry].dividend;
+        console.log(quinella_place[entry].win_combo[0] + " and " + quinella_place[entry].win_combo[1] + " won QUINELLA_PLACE.  The payout is " + quinella_place[entry].dividend);
+      }
+    }
+  }
+
+  // CHECK TRIO
+  if ( (_.contains(user_horse_selection, trio.win_combo[0])) && (_.contains(user_horse_selection, trio.win_combo[1])) && (_.contains(user_horse_selection, trio.win_combo[2])) ) {
+
+    if (high_score < trio.dividend) {
+      high_score = trio.dividend;
+      console.log(trio.win_combo[0] + " and " + trio.win_combo[1] + " won WIN.  The payout is " + trio.dividend);
+    }
+  }
+
+  // CHECK FIRST_4
+  if ( (_.contains(user_horse_selection, first_4.win_combo[0])) && (_.contains(user_horse_selection, first_4.win_combo[1])) && (_.contains(user_horse_selection, first_4.win_combo[2])) && (_.contains(user_horse_selection, first_4.win_combo[3])) ) {
+
+    if (high_score < first_4.dividend) {
+      high_score = first_4.dividend;
+      console.log(first_4.win_combo[0] + " and " + first_4.win_combo[1] + " won WIN.  The payout is " + first_4.dividend);
+    }
+  }
+
+
+  console.log("The high score this race is: " + high_score);
+
+}
+
+
+  // LOOP THROUGH ALL TYPES OF PAYOUTS
+      //  IF WINNING COMBO MATCHES USER SELECTION
+            // IF DIVIDEND OF WINNING COMBO IS GREATER THAN high_score
+            //   HIGH_SCORE = DIVIDEND
+
