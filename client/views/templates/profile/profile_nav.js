@@ -1,5 +1,3 @@
-tipsterName = Meteor.users.findOne().profile.name;
-
 Template.profile_nav.helpers({
 
   username: function() {
@@ -7,9 +5,16 @@ Template.profile_nav.helpers({
       if (Meteor.user())
         return Meteor.user().profile.name;
     } else {
-        console.log("not profile");
-        console.log(tipsterName);
-        return tipsterName;
+      if (Meteor.user()) {
+        var url = window.location.pathname;
+        var id = url.substring(url.lastIndexOf('/') + 1);
+        console.log(id);
+        var user = Meteor.users.find( { _id: id } );
+        if (user.count() == 0)
+          return '';
+        else
+          return user.fetch()[0].profile.name;
+      }
     }
   }
 });
