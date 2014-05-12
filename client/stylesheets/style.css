@@ -496,3 +496,17 @@ nav li a {
     text-decoration: none;
 }
 
+
+/*----- EDIT PROFILE -----*/
+.welcome_message {
+  margin: 70px 10px 0 10px;
+  font-size: 1.3em;
+  text-align: center;
+}
+
+.add_name {
+  margin: 20px 10px 0 10px;
+  font-size: 1.3em;
+  width: 93%;
+  padding: 0 10px 0 10px;
+}
