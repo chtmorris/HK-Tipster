@@ -5,7 +5,8 @@
       "bootstrap-3": {},
       "iron-router": {},
       "slick": {},
-      "accounts-ui-bootstrap-3": {}
+      "accounts-ui-bootstrap-3": {},
+      "jquery-ui": {}
     },
     "packages": {
       "bootstrap-3": {
@@ -20,13 +21,18 @@
       },
       "slick": {
         "git": "https://github.com/lourd/slick.git",
-        "tag": "v0.1.2",
-        "commit": "843cc571e18f655bfa3aba5e1061a84598df4013"
+        "tag": "v0.1.3",
+        "commit": "1d02527073411fb836a85ded62addfd373bc7f1f"
       },
       "accounts-ui-bootstrap-3": {
         "git": "https://github.com/mangasocial/meteor-accounts-ui-bootstrap-3.git",
         "tag": "v0.3.0-1",
         "commit": "93ffa5d0e325dc7026de89f6d90c178fa04bdd3a"
+      },
+      "jquery-ui": {
+        "git": "https://github.com/TimHeckel/meteor-jquery-ui.git",
+        "tag": "v1.9.2",
+        "commit": "c437d45edcf1367df8d5ffa8bad2867758030bd2"
       },
       "blaze-layout": {
         "git": "https://github.com/EventedMind/blaze-layout.git",

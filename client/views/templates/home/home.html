@@ -1,51 +1,116 @@
 <template name="home">
 
-  <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
-    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" id="drawer-trigger">
-      <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-    </button>
-    <div class="top-logo"><a class="navbar-brand">HK Tipster</a></div>
-  </nav>
+  <div id="container">
 
-  <!-- TOP BANNER -->
-  <div class="container-home">
-    <div class="container-overlay">
-      <p class="container-text-1"> Next race on Wednesday May 5</p>
-      <p class="container-text-2"> Happy Valley race track</p>
-    </div>
-  </div>
+      <header>
+        <div class="navbar navbar-default">
+          <button type="button" class="navbar-toggle navbar navbar-default" id="hamburger">
+            <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+          </button>
+          <div class="top-logo"><a class="navbar-brand">HK Tipster</a></div>
+        </div>
+      </header>
 
-  <!-- TOP TIPSTERS -->
-  <div data-role="content" class="km-content km-widget km-scroll-wrapper km-insetcontent" style="overflow: hidden;">
-    <div class="km-scroll-header"></div>
-    <div class="km-scroll-container" style="-webkit-transform-origin: 0% 0%;">
-      <div class="km-listview-wrapper">
-        <ul data-role="listview" data-style="inset" data-type="group" class="km-widget km-listview km-listgroupinset">
-
-          <li class="km-group-container">
-            <div class="km-group-title">
-              <div class="km-text">
-                Top Tipsters
-              </div>
-            </div>
-            <ul class="km-list">
-
-              {{#each tipster}}
-                {{> tipsterList}}
-              {{/each}}
-
-            </ul>
-          </li>
+      <nav class="mobileNav">
+        <ul>
+          <li><a href="{{pathFor 'profile'}}">My Profile</a></li>
+          <li><a href="/#/">Race Day Summary</a></li>
+          <li><a href="/#/login" id="logout">Log Out</a></li>
         </ul>
+      </nav>
+
+      <div id="contentLayer"></div>
+
+      <div id="content">
+        <!-- TOP BANNER -->
+        <div class="container-home">
+          <div class="container-overlay">
+            <p class="container-text-1"> Next race on Wednesday May 5</p>
+            <p class="container-text-2"> Happy Valley race track</p>
+          </div>
+        </div>
+
+        <!-- TOP TIPSTERS -->
+        <div data-role="content" class="km-content km-widget km-scroll-wrapper km-insetcontent" style="overflow: hidden;">
+          <div class="km-scroll-header"></div>
+          <div class="km-scroll-container" style="-webkit-transform-origin: 0% 0%;">
+            <div class="km-listview-wrapper">
+              <ul data-role="listview" data-style="inset" data-type="group" class="km-widget km-listview km-listgroupinset">
+
+                <li class="km-group-container">
+                  <div class="km-group-title">
+                    <div class="km-text">
+                      Top Tipsters
+                    </div>
+                  </div>
+                  <ul class="km-list">
+
+                    {{#each tipster}}
+                      {{> tipsterList}}
+                    {{/each}}
+
+                  </ul>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
       </div>
-    </div>
   </div>
 
+<script>
+$(function() {
 
-{{> hamburger}}
-<!-- </div> -->
+  console.log("page loaded");
+
+  $("#hamburger").click(function() {
+
+      console.log("hamburger clicked");
+      //set the width of primary content container -> content should not scale while animating
+      var contentWidth = $('#content').width();
+
+      //set the content with the width that it has originally
+      $('#content').css('width', contentWidth);
+
+      //display a layer to disable clicking and scrolling on the content while menu is shown
+      $('#contentLayer').css('display', 'block');
+
+      //disable all scrolling on mobile devices while menu is shown
+      $('#container').bind('touchmove', function(e){e.preventDefault()});
+
+      // set margin for the whole container with a $ UI animation
+      $("#container").animate({"marginLeft": ["70%", 'easeOutExpo']}, {
+          duration: 700
+      });
+
+    });
+
+    //close the menu
+    $("#contentLayer").click(function() {
+
+        //enable all scrolling on mobile devices when menu is closed
+        $('#container').unbind('touchmove');
+
+        //set margin for the whole container back to original state with a $ UI animation
+        $("#container").animate({"marginLeft": ["0", 'easeOutExpo']}, {
+            duration: 700,
+            complete: function() {
+                  $('#content').css('width', 'auto');
+                $('#contentLayer').css('display', 'none');
+
+            }
+        });
+    });
+
+});
+</script>
+
 
 </template>
+
+
+
+
