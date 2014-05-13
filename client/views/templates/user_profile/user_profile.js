@@ -327,3 +327,8 @@ var compute_score = function() {
             // IF DIVIDEND OF WINNING COMBO IS GREATER THAN high_score
             //   HIGH_SCORE = DIVIDEND
 
+Template.racedayInput.helpers({
+  getHorse: function(race, horse) {
+    return Meteor.user().profile.race.raceDate[race][horse]
+  }
+});
