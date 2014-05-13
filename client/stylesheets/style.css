@@ -388,6 +388,17 @@ div.dropdown-menu {
   border-color: #1148e4;
 }
 
+.btn-following{
+  margin-top: 8px;
+  padding-bottom: 18px;
+  font-size: 10px;
+  width: 170px;
+  height: 12px;
+  color: white !important;
+  /*border-color: #1148e4;*/
+
+}
+
 .history-raceday-container{
   padding-left: 10px;
   padding-right: 10px;

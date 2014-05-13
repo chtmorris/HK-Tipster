@@ -37,7 +37,6 @@ Template.racedayInput.events({'submit form#race-1' : function(event, template) {
   horse4_race1.value="";
 
   Meteor.users.update({_id:Meteor.user()._id}, {$set:{"profile.race.raceDate.race1":data}});
-  Meteor.users.update({_id:Meteor.user()._id}, {$set:{"profile.score": 100}});
   compute_score();
 
 }});

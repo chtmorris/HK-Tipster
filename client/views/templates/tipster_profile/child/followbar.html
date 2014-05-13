@@ -1,3 +1,22 @@
 <template name="followbar">
-  <button type="submit" class="btn btn-default btn-followers">Follow +</button>
+  {{#if isFollowing}}
+  <div>
+    {{ > following }}
+  </div>
+  {{else}}
+  <div>
+    {{ > follow }}
+  </div>
+  {{/if}}
+</template>
+
+
+
+
+<template name="follow">
+  <button id="follow-button" type="submit" class="btn btn-default btn-followers">Follow +</button>
+</template>
+
+<template name="following">
+  <button id="follow-button" type="submit" class="btn btn-success btn-following">Following</button>
 </template>
