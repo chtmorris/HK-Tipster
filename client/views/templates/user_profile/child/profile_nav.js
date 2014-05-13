@@ -8,7 +8,7 @@ Template.profile_nav.helpers({
       if (Meteor.user()) {
         var url = window.location.pathname;
         var id = url.substring(url.lastIndexOf('/') + 1);
-        console.log(id);
+        // console.log(id);
         var user = Meteor.users.find( { _id: id } );
         if (user.count() == 0)
           return '';

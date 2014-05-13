@@ -23,4 +23,7 @@ Template.edit_profile.events({'submit form#name_submit' : function(event, templa
   Meteor.users.update({_id:Meteor.user()._id}, {$set:{"profile.race.raceDate.race7":data2}});
   Meteor.users.update({_id:Meteor.user()._id}, {$set:{"profile.race.raceDate.race8":data2}});
 
+  Meteor.users.update({_id:Meteor.user()._id}, {$set:{"profile.score": 0}});
+  Meteor.users.update({_id:Meteor.user()._id}, {$set:{"profile.race.raceDate.followee": []}});
+
 }});
