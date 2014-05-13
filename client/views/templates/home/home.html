@@ -17,8 +17,8 @@
       <nav class="mobileNav">
         <ul>
           <li><a href="{{pathFor 'profile'}}">My Profile</a></li>
-          <li><a href="/#/">Race Day Summary</a></li>
-          <li><a href="/#/login" id="logout">Log Out</a></li>
+          <li><a href="{{pathFor 'raceday'}}">Race Day Summary</a></li>
+          <li><a href="{{pathFor 'login'}}" id="login-buttons-logout">Log Out</a></li>
         </ul>
       </nav>
 
@@ -28,7 +28,7 @@
         <!-- TOP BANNER -->
         <div class="container-home">
           <div class="container-overlay">
-            <p class="container-text-1"> Next race on Wednesday May 5</p>
+            <p class="container-text-1"> Welcome to the races Wednesday May 14</p>
             <p class="container-text-2"> Happy Valley race track</p>
           </div>
         </div>
@@ -64,11 +64,8 @@
 <script>
 $(function() {
 
-  console.log("page loaded");
-
   $("#hamburger").click(function() {
 
-      console.log("hamburger clicked");
       //set the width of primary content container -> content should not scale while animating
       var contentWidth = $('#content').width();
 

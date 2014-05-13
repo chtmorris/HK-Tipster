@@ -46,6 +46,16 @@ WHITE:  - #FFF
   margin-left: -44px;
 }
 
+.user_name {
+  position: fixed;
+  top: 0%;
+  min-width: 300px;
+  left: 50%;
+  font-size: 0.8em;
+  text-align: center;
+  margin: 0px -40px 0 -135px;
+}
+
 .navbar-header {
     float: left;
     padding: 15px;
@@ -178,7 +188,7 @@ WHITE:  - #FFF
 /*----- RACEDAY NAV -----*/
 .navbar-toggle.back-arrow{
   border-color: hsla(0, 0%, 100%, 0) !important;
-  margin: -18px 0 -7px 0;
+  margin: -18px -20px -7px 0;
 }
 
 .glyphicon {
@@ -496,3 +506,22 @@ nav li a {
     text-decoration: none;
 }
 
+
+/*----- EDIT PROFILE -----*/
+.welcome_message {
+  margin: 70px 10px 0 10px;
+  font-size: 1.3em;
+  text-align: center;
+}
+
+.add_name {
+  margin: 40px 10px 0 10px;
+  font-size: 1.3em;
+  width: 93%;
+  padding: 0 10px 0 10px;
+}
+
+#submit_name {
+  margin: 40px 0px 0 110px;
+  font-size: 1.3em;
+}
