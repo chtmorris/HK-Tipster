@@ -15,5 +15,12 @@ Template.edit_profile.events({'submit form#name_submit' : function(event, templa
 
   Meteor.users.update({_id:Meteor.user()._id}, {$set:{"profile":data}});
   Meteor.users.update({_id:Meteor.user()._id}, {$set:{"profile.race.raceDate.race1":data2}});
+  Meteor.users.update({_id:Meteor.user()._id}, {$set:{"profile.race.raceDate.race2":data2}});
+  Meteor.users.update({_id:Meteor.user()._id}, {$set:{"profile.race.raceDate.race3":data2}});
+  Meteor.users.update({_id:Meteor.user()._id}, {$set:{"profile.race.raceDate.race4":data2}});
+  Meteor.users.update({_id:Meteor.user()._id}, {$set:{"profile.race.raceDate.race5":data2}});
+  Meteor.users.update({_id:Meteor.user()._id}, {$set:{"profile.race.raceDate.race6":data2}});
+  Meteor.users.update({_id:Meteor.user()._id}, {$set:{"profile.race.raceDate.race7":data2}});
+  Meteor.users.update({_id:Meteor.user()._id}, {$set:{"profile.race.raceDate.race8":data2}});
 
 }});
