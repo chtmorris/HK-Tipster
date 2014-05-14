@@ -3,7 +3,6 @@
 
 <script>
 
-  console.log("in chart");
   var followee_ids = [];
   var followees = [];
   var user = Meteor.user();
@@ -40,10 +39,9 @@
    var horse13 = 0;
 
     for (user in raw_data) {
-      console.log('raw_data');
+
       for (horse in raw_data[user].race4) {
 
-        console.log('horse: ' + raw_data[user].race4[horse]);
         var choice = parseInt(raw_data[user].race4[horse]);
 
         switch (choice) {
