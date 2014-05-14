@@ -3,7 +3,7 @@
 
 <script>
 
-
+Meteor.setTimeout(function() {
   var followee_ids = [];
   var followees = [];
   var user = Meteor.user();
@@ -107,6 +107,7 @@
     // chart.
     labels: ['Value']
   });
+}, 1000);
 
 </script>
 </template>
