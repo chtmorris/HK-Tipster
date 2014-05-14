@@ -39,6 +39,8 @@ Template.racedayInput.events({'submit form#race-1' : function(event, template) {
   Meteor.users.update({_id:Meteor.user()._id}, {$set:{"profile.race.raceDate.race1":data}});
   compute_score();
 
+
+
 }});
 
 

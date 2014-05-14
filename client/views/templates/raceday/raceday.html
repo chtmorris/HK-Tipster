@@ -26,34 +26,15 @@
             <th class="img-icon"><img src="img/horse-icon.png" class="horse-icon"></th>
           </thead>
           <tbody>
-            <tr>
-              <td class="img-icon"><img src="http://images.ak.instagram.com/profiles/profile_426118112_75sq_1371752161.jpg" class="profile-pic"></td>
-              <td class="horse-picks">1</td>
-              <td class="horse-picks">7</td>
-              <td class="horse-picks">9</td>
-              <td class="horse-picks">14</td>
-            </tr>
-            <tr>
-              <td class="img-icon"><img src="http://images.ak.instagram.com/profiles/profile_4829269_75sq_1307441458.jpg" class="profile-pic"></td>
-              <td class="horse-picks">5</td>
-              <td class="horse-picks">7</td>
-              <td class="horse-picks">9</td>
-              <td class="horse-picks">14</td>
-            </tr>
-            <tr>
-              <td class="img-icon"><img src="http://images.ak.instagram.com/profiles/profile_426118112_75sq_1371752161.jpg" class="profile-pic"></td>
-              <td class="horse-picks">1</td>
-              <td class="horse-picks">7</td>
-              <td class="horse-picks">9</td>
-              <td class="horse-picks">14</td>
-            </tr>
-            <tr>
-              <td class="img-icon"><img src="http://images.ak.instagram.com/profiles/profile_426118112_75sq_1371752161.jpg" class="profile-pic"></td>
-              <td class="horse-picks">1</td>
-              <td class="horse-picks">7</td>
-              <td class="horse-picks">9</td>
-              <td class="horse-picks">14</td>
-            </tr>
+            {{#each followee}}
+              <tr>
+                <td class="img-icon"><img src="http://images.ak.instagram.com/profiles/profile_426118112_75sq_1371752161.jpg" class="profile-pic"></td>
+                <td class="horse-picks">{{ getHorse "race1" "horse_1" this}}</td>
+                <td class="horse-picks">{{ getHorse "race1" "horse_2" this}}</td>
+                <td class="horse-picks">{{ getHorse "race1" "horse_3" this}}</td>
+                <td class="horse-picks">{{ getHorse "race1" "horse_4" this}}</td>
+              </tr>
+            {{/each}}
           </tbody>
         </table>
       </div>
@@ -71,20 +52,15 @@
             <th class="img-icon"><img src="img/horse-icon.png" class="horse-icon"></th>
           </thead>
           <tbody>
-            <tr>
-              <td class="img-icon"><img src="http://images.ak.instagram.com/profiles/profile_426118112_75sq_1371752161.jpg" class="profile-pic"></td>
-              <td class="horse-picks">1</td>
-              <td class="horse-picks">7</td>
-              <td class="horse-picks">9</td>
-              <td class="horse-picks">14</td>
-            </tr>
-            <tr>
-              <td class="img-icon"><img src="http://images.ak.instagram.com/profiles/profile_4829269_75sq_1307441458.jpg" class="profile-pic"></td>
-              <td class="horse-picks">5</td>
-              <td class="horse-picks">7</td>
-              <td class="horse-picks">9</td>
-              <td class="horse-picks">14</td>
-            </tr>
+            {{#each followee}}
+              <tr>
+                <td class="img-icon"><img src="http://images.ak.instagram.com/profiles/profile_426118112_75sq_1371752161.jpg" class="profile-pic"></td>
+                <td class="horse-picks">{{ getHorse "race2" "horse_1" this}}</td>
+                <td class="horse-picks">{{ getHorse "race2" "horse_2" this}}</td>
+                <td class="horse-picks">{{ getHorse "race2" "horse_3" this}}</td>
+                <td class="horse-picks">{{ getHorse "race2" "horse_4" this}}</td>
+              </tr>
+            {{/each}}
           </tbody>
         </table>
       </div>
@@ -102,20 +78,15 @@
             <th class="img-icon"><img src="img/horse-icon.png" class="horse-icon"></th>
           </thead>
           <tbody>
-            <tr>
-              <td class="img-icon"><img src="http://images.ak.instagram.com/profiles/profile_426118112_75sq_1371752161.jpg" class="profile-pic"></td>
-              <td class="horse-picks">1</td>
-              <td class="horse-picks">7</td>
-              <td class="horse-picks">9</td>
-              <td class="horse-picks">14</td>
-            </tr>
-            <tr>
-              <td class="img-icon"><img src="http://images.ak.instagram.com/profiles/profile_4829269_75sq_1307441458.jpg" class="profile-pic"></td>
-              <td class="horse-picks">5</td>
-              <td class="horse-picks">7</td>
-              <td class="horse-picks">9</td>
-              <td class="horse-picks">14</td>
-            </tr>
+            {{#each followee}}
+              <tr>
+                <td class="img-icon"><img src="http://images.ak.instagram.com/profiles/profile_426118112_75sq_1371752161.jpg" class="profile-pic"></td>
+                <td class="horse-picks">{{ getHorse "race3" "horse_1" this}}</td>
+                <td class="horse-picks">{{ getHorse "race3" "horse_2" this}}</td>
+                <td class="horse-picks">{{ getHorse "race3" "horse_3" this}}</td>
+                <td class="horse-picks">{{ getHorse "race3" "horse_4" this}}</td>
+              </tr>
+            {{/each}}
           </tbody>
         </table>
       </div>
@@ -133,20 +104,15 @@
             <th class="img-icon"><img src="img/horse-icon.png" class="horse-icon"></th>
           </thead>
           <tbody>
-            <tr>
-              <td class="img-icon"><img src="http://images.ak.instagram.com/profiles/profile_426118112_75sq_1371752161.jpg" class="profile-pic"></td>
-              <td class="horse-picks">1</td>
-              <td class="horse-picks">7</td>
-              <td class="horse-picks">9</td>
-              <td class="horse-picks">14</td>
-            </tr>
-            <tr>
-              <td class="img-icon"><img src="http://images.ak.instagram.com/profiles/profile_4829269_75sq_1307441458.jpg" class="profile-pic"></td>
-              <td class="horse-picks">5</td>
-              <td class="horse-picks">7</td>
-              <td class="horse-picks">9</td>
-              <td class="horse-picks">14</td>
-            </tr>
+            {{#each followee}}
+              <tr>
+                <td class="img-icon"><img src="http://images.ak.instagram.com/profiles/profile_426118112_75sq_1371752161.jpg" class="profile-pic"></td>
+                <td class="horse-picks">{{ getHorse "race4" "horse_1" this}}</td>
+                <td class="horse-picks">{{ getHorse "race4" "horse_2" this}}</td>
+                <td class="horse-picks">{{ getHorse "race4" "horse_3" this}}</td>
+                <td class="horse-picks">{{ getHorse "race4" "horse_4" this}}</td>
+              </tr>
+            {{/each}}
           </tbody>
         </table>
       </div>
@@ -164,20 +130,15 @@
             <th class="img-icon"><img src="img/horse-icon.png" class="horse-icon"></th>
           </thead>
           <tbody>
-            <tr>
-              <td class="img-icon"><img src="http://images.ak.instagram.com/profiles/profile_426118112_75sq_1371752161.jpg" class="profile-pic"></td>
-              <td class="horse-picks">1</td>
-              <td class="horse-picks">7</td>
-              <td class="horse-picks">9</td>
-              <td class="horse-picks">14</td>
-            </tr>
-            <tr>
-              <td class="img-icon"><img src="http://images.ak.instagram.com/profiles/profile_4829269_75sq_1307441458.jpg" class="profile-pic"></td>
-              <td class="horse-picks">5</td>
-              <td class="horse-picks">7</td>
-              <td class="horse-picks">9</td>
-              <td class="horse-picks">14</td>
-            </tr>
+            {{#each followee}}
+             <tr>
+                <td class="img-icon"><img src="http://images.ak.instagram.com/profiles/profile_426118112_75sq_1371752161.jpg" class="profile-pic"></td>
+                <td class="horse-picks">{{ getHorse "race5" "horse_1" this}}</td>
+                <td class="horse-picks">{{ getHorse "race5" "horse_2" this}}</td>
+                <td class="horse-picks">{{ getHorse "race5" "horse_3" this}}</td>
+                <td class="horse-picks">{{ getHorse "race5" "horse_4" this}}</td>
+              </tr>
+            {{/each}}
           </tbody>
         </table>
       </div>
@@ -195,20 +156,15 @@
             <th class="img-icon"><img src="img/horse-icon.png" class="horse-icon"></th>
           </thead>
           <tbody>
-            <tr>
-              <td class="img-icon"><img src="http://images.ak.instagram.com/profiles/profile_426118112_75sq_1371752161.jpg" class="profile-pic"></td>
-              <td class="horse-picks">1</td>
-              <td class="horse-picks">7</td>
-              <td class="horse-picks">9</td>
-              <td class="horse-picks">14</td>
-            </tr>
-            <tr>
-              <td class="img-icon"><img src="http://images.ak.instagram.com/profiles/profile_4829269_75sq_1307441458.jpg" class="profile-pic"></td>
-              <td class="horse-picks">5</td>
-              <td class="horse-picks">7</td>
-              <td class="horse-picks">9</td>
-              <td class="horse-picks">14</td>
-            </tr>
+            {{#each followee}}
+              <tr>
+                <td class="img-icon"><img src="http://images.ak.instagram.com/profiles/profile_426118112_75sq_1371752161.jpg" class="profile-pic"></td>
+                <td class="horse-picks">{{ getHorse "race6" "horse_1" this}}</td>
+                <td class="horse-picks">{{ getHorse "race6" "horse_2" this}}</td>
+                <td class="horse-picks">{{ getHorse "race6" "horse_3" this}}</td>
+                <td class="horse-picks">{{ getHorse "race6" "horse_4" this}}</td>
+              </tr>
+            {{/each}}
           </tbody>
         </table>
       </div>
@@ -226,20 +182,15 @@
             <th class="img-icon"><img src="img/horse-icon.png" class="horse-icon"></th>
           </thead>
           <tbody>
-            <tr>
-              <td class="img-icon"><img src="http://images.ak.instagram.com/profiles/profile_426118112_75sq_1371752161.jpg" class="profile-pic"></td>
-              <td class="horse-picks">1</td>
-              <td class="horse-picks">7</td>
-              <td class="horse-picks">9</td>
-              <td class="horse-picks">14</td>
-            </tr>
-            <tr>
-              <td class="img-icon"><img src="http://images.ak.instagram.com/profiles/profile_4829269_75sq_1307441458.jpg" class="profile-pic"></td>
-              <td class="horse-picks">5</td>
-              <td class="horse-picks">7</td>
-              <td class="horse-picks">9</td>
-              <td class="horse-picks">14</td>
-            </tr>
+            {{#each followee}}
+              <tr>
+                <td class="img-icon"><img src="http://images.ak.instagram.com/profiles/profile_426118112_75sq_1371752161.jpg" class="profile-pic"></td>
+                <td class="horse-picks">{{ getHorse "race7" "horse_1" this}}</td>
+                <td class="horse-picks">{{ getHorse "race7" "horse_2" this}}</td>
+                <td class="horse-picks">{{ getHorse "race7" "horse_3" this}}</td>
+                <td class="horse-picks">{{ getHorse "race7" "horse_4" this}}</td>
+              </tr>
+            {{/each}}
           </tbody>
         </table>
       </div>
@@ -257,20 +208,15 @@
             <th class="img-icon"><img src="img/horse-icon.png" class="horse-icon"></th>
           </thead>
           <tbody>
-            <tr>
-              <td class="img-icon"><img src="http://images.ak.instagram.com/profiles/profile_426118112_75sq_1371752161.jpg" class="profile-pic"></td>
-              <td class="horse-picks">1</td>
-              <td class="horse-picks">7</td>
-              <td class="horse-picks">9</td>
-              <td class="horse-picks">14</td>
-            </tr>
-            <tr>
-              <td class="img-icon"><img src="http://images.ak.instagram.com/profiles/profile_4829269_75sq_1307441458.jpg" class="profile-pic"></td>
-              <td class="horse-picks">5</td>
-              <td class="horse-picks">7</td>
-              <td class="horse-picks">9</td>
-              <td class="horse-picks">14</td>
-            </tr>
+            {{#each followee}}
+              <tr>
+                <td class="img-icon"><img src="http://images.ak.instagram.com/profiles/profile_426118112_75sq_1371752161.jpg" class="profile-pic"></td>
+                <td class="horse-picks">{{ getHorse "race8" "horse_1" this}}</td>
+                <td class="horse-picks">{{ getHorse "race8" "horse_2" this}}</td>
+                <td class="horse-picks">{{ getHorse "race8" "horse_3" this}}</td>
+                <td class="horse-picks">{{ getHorse "race8" "horse_4" this}}</td>
+              </tr>
+            {{/each}}
           </tbody>
         </table>
       </div>

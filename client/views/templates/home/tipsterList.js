@@ -11,7 +11,7 @@ Template.home.helpers({
 
       data.push(p1);
     });
-
+//
     return data;
   }
 });
