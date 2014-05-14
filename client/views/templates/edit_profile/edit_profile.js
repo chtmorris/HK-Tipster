@@ -2,9 +2,20 @@ Template.edit_profile.events({'submit form#name_submit' : function(event, templa
   event.preventDefault();
 
   name_input = template.find("input[name=user_name]");
+  pic_input = template.find("input[name=user_pic]");
 
-  var data = {name: name_input.value};
+  if (pic_input.value === "") {
+    pic_input.value = "http://funny-pictures.funmunch.com/pictures/Sumo-Jockey.jpg";
+  };
+
+  var data = {
+    name: name_input.value,
+    url: pic_input.value,
+  };
+
   name_input.value="";
+  pic_input.value="";
+
 
   var data2 = {
     horse_1: "",
@@ -26,4 +37,5 @@ Template.edit_profile.events({'submit form#name_submit' : function(event, templa
   Meteor.users.update({_id:Meteor.user()._id}, {$set:{"profile.score": 0}});
   Meteor.users.update({_id:Meteor.user()._id}, {$set:{"profile.race.raceDate.followee": []}});
 
+  Router.go('home');
 }});
