@@ -1,17 +1,71 @@
+
 <template name="followee_picks">
 
 <tr>
   <td class="img-icon"><img src="http://images.ak.instagram.com/profiles/profile_426118112_75sq_1371752161.jpg" class="profile-pic"></td>
   <td class="horse-picks">{{ getHorse "race1" "horse_1" this}}</td>
-  <td class="horse-picks">1</td>
-  <td class="horse-picks">1</td>
-  <td class="horse-picks">1</td>
+  <td class="horse-picks">{{ getHorse "race1" "horse_2" this}}</td>
+  <td class="horse-picks">{{ getHorse "race1" "horse_3" this}}</td>
+  <td class="horse-picks">{{ getHorse "race1" "horse_4" this}}</td>
 </tr>
 
 </template>
 
-<template name="followee_picks2">
 
-The id passed in: {{this}}!!!
+<template name="followee_picks3">
+  followee: {{this}}<br>
+  <hr>
+get Horse<br> {{ getHorse this.key "horse_1" this.value}}
+
+<hr>
+
 
 </template>
+
+<!-- <template name="followee_picks_race3">
+
+<tr>
+  <td class="img-icon"><img src="http://images.ak.instagram.com/profiles/profile_426118112_75sq_1371752161.jpg" class="profile-pic"></td>
+  <td class="horse-picks">{{ getHorse "race3" "horse_1" this}}</td>
+  <td class="horse-picks">{{ getHorse "race3" "horse_2" this}}</td>
+  <td class="horse-picks">{{ getHorse "race3" "horse_3" this}}</td>
+  <td class="horse-picks">{{ getHorse "race3" "horse_4" this}}</td>
+</tr>
+
+</template>
+
+<template name="followee_picks_race4">
+
+<tr>
+  <td class="img-icon"><img src="http://images.ak.instagram.com/profiles/profile_426118112_75sq_1371752161.jpg" class="profile-pic"></td>
+  <td class="horse-picks">{{ getHorse "race4" "horse_1" this}}</td>
+  <td class="horse-picks">{{ getHorse "race4" "horse_2" this}}</td>
+  <td class="horse-picks">{{ getHorse "race4" "horse_3" this}}</td>
+  <td class="horse-picks">{{ getHorse "race4" "horse_4" this}}</td>
+</tr>
+
+</template>
+
+<template name="followee_picks_race5">
+
+<tr>
+  <td class="img-icon"><img src="http://images.ak.instagram.com/profiles/profile_426118112_75sq_1371752161.jpg" class="profile-pic"></td>
+  <td class="horse-picks">{{ getHorse "race5" "horse_1" this}}</td>
+  <td class="horse-picks">{{ getHorse "race5" "horse_2" this}}</td>
+  <td class="horse-picks">{{ getHorse "race5" "horse_3" this}}</td>
+  <td class="horse-picks">{{ getHorse "race5" "horse_4" this}}</td>
+</tr>
+
+</template>
+
+<template name="followee_picks_race6">
+
+<tr>
+  <td class="img-icon"><img src="http://images.ak.instagram.com/profiles/profile_426118112_75sq_1371752161.jpg" class="profile-pic"></td>
+  <td class="horse-picks">{{ getHorse "race6" "horse_1" this}}</td>
+  <td class="horse-picks">{{ getHorse "race6" "horse_2" this}}</td>
+  <td class="horse-picks">{{ getHorse "race6" "horse_3" this}}</td>
+  <td class="horse-picks">{{ getHorse "race6" "horse_4" this}}</td>
+</tr>
+
+</template> -->
