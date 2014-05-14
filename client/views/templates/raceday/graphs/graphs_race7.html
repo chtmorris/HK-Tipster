@@ -1,0 +1,113 @@
+<template name="graphs_race7">
+  <div id="myseventhchart" style="height: 250px;"></div>
+
+<script>
+
+  console.log("in chart");
+  var followee_ids = [];
+  var followees = [];
+  var user = Meteor.user();
+  var raw_data = [];
+
+  if (user) {
+
+    for (index in Meteor.user().profile.race.raceDate.followee) {
+      // followee_ids.push(Meteor.user().profile.race.raceDate.followee[id]);
+      id = Meteor.user().profile.race.raceDate.followee[index];
+      Meteor.users.find({_id: id}).forEach( function(obj) {
+        p1 = {
+          race7 : obj.profile.race.raceDate.race7
+        };
+        raw_data.push(p1);
+      });
+    }
+    // console.log(raw_data);
+
+    //Massage the DATA
+
+   var horse1 = 0;
+   var horse2 = 0;
+   var horse3 = 0;
+   var horse4 = 0;
+   var horse5 = 0;
+   var horse6 = 0;
+   var horse7 = 0;
+   var horse8 = 0;
+   var horse9 = 0;
+   var horse10 = 0;
+   var horse11 = 0;
+   var horse12 = 0;
+   var horse13 = 0;
+
+    for (user in raw_data) {
+      console.log('raw_data');
+      for (horse in raw_data[user].race7) {
+
+        console.log('horse: ' + raw_data[user].race7[horse]);
+        var choice = parseInt(raw_data[user].race7[horse]);
+
+        switch (choice) {
+
+           case 1:   horse1++; break;
+           case 2:   horse2++; break;
+           case 3:   horse3++; break;
+           case 4:   horse4++; break;
+           case 5:   horse5++; break;
+           case 6:   horse6++; break;
+           case 7:   horse7++; break;
+           case 8:   horse8++; break;
+           case 9:   horse9++; break;
+           case 10:  horse10++; break;
+           case 11:  horse11++; break;
+           case 12:  horse12++; break;
+           case 13:  horse13++; break;
+
+          default:
+            console.log("No Horse");
+
+        }
+
+      }
+
+    }
+
+  }
+
+
+
+
+  new Morris.Bar({
+    // ID of the element in which to draw the chart.
+    element: 'myseventhchart',
+    // Chart data records -- each entry in this array corresponds to a point on
+    // the chart.
+
+
+    data: [
+
+          { Horse: '1' , value:  horse1 },
+          { Horse: '2' , value:  horse2 },
+          { Horse: '3' , value:  horse3  },
+          { Horse: '4' , value:  horse4  },
+          { Horse: '5' , value:  horse5  },
+          { Horse: '6' , value:  horse6  },
+          { Horse: '7' , value:  horse7  },
+          { Horse: '8' , value:  horse8  },
+          { Horse: '9' , value:  horse9  },
+          { Horse: '10', value:  horse10  },
+          { Horse: '11', value:  horse11  },
+          { Horse: '12', value:  horse12  },
+          { Horse: '13', value:  horse13  }
+
+    ],
+    // The name of the data record attribute that contains x-values.
+    xkey: ['Horse'],
+    // A list of names of data record attributes that contain y-values.
+    ykeys: ['value'],
+    // Labels for the ykeys -- will be displayed when you hover over the
+    // chart.
+    labels: ['Value']
+  });
+
+</script>
+</template>

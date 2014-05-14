@@ -9,12 +9,8 @@ Template.raceday.helpers ({
       for (id in Meteor.user().profile.race.raceDate.followee) {
         followee_ids.push(Meteor.user().profile.race.raceDate.followee[id]);
       }
-      console.log(followee_ids);
-
     }
-
     return followee_ids;
-
     }
 
 
