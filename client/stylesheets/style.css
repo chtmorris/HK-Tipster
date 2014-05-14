@@ -230,8 +230,8 @@ WHITE:  - #FFF
 }
 
 .scroll-it {
-  overflow: scroll;
-  height: 300px !important;
+/*  overflow: scroll;
+*/  /*height: 300px !important;*/
 }
 
 
@@ -535,4 +535,12 @@ nav li a {
 #submit_name {
   margin: 40px 0px 0 110px;
   font-size: 1.3em;
+}
+
+.scroll-it{
+  height: !important;
+}
+
+.morris-hover{
+  opacity: 0;
 }
