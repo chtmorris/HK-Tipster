@@ -26,34 +26,9 @@
             <th class="img-icon"><img src="img/horse-icon.png" class="horse-icon"></th>
           </thead>
           <tbody>
-            <tr>
-              <td class="img-icon"><img src="http://images.ak.instagram.com/profiles/profile_426118112_75sq_1371752161.jpg" class="profile-pic"></td>
-              <td class="horse-picks">1</td>
-              <td class="horse-picks">7</td>
-              <td class="horse-picks">9</td>
-              <td class="horse-picks">14</td>
-            </tr>
-            <tr>
-              <td class="img-icon"><img src="http://images.ak.instagram.com/profiles/profile_4829269_75sq_1307441458.jpg" class="profile-pic"></td>
-              <td class="horse-picks">5</td>
-              <td class="horse-picks">7</td>
-              <td class="horse-picks">9</td>
-              <td class="horse-picks">14</td>
-            </tr>
-            <tr>
-              <td class="img-icon"><img src="http://images.ak.instagram.com/profiles/profile_426118112_75sq_1371752161.jpg" class="profile-pic"></td>
-              <td class="horse-picks">1</td>
-              <td class="horse-picks">7</td>
-              <td class="horse-picks">9</td>
-              <td class="horse-picks">14</td>
-            </tr>
-            <tr>
-              <td class="img-icon"><img src="http://images.ak.instagram.com/profiles/profile_426118112_75sq_1371752161.jpg" class="profile-pic"></td>
-              <td class="horse-picks">1</td>
-              <td class="horse-picks">7</td>
-              <td class="horse-picks">9</td>
-              <td class="horse-picks">14</td>
-            </tr>
+            {{#each followee}}
+              {{> followee_picks this }}
+            {{/each}}
           </tbody>
         </table>
       </div>
