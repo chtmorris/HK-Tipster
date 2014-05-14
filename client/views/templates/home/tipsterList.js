@@ -34,9 +34,5 @@ Template.home.tipster = function () {
       data.push(p1);
     });
 
-  return data;
-
-  // return Meteor.users.find({}, {sort: {tipsterName: -1}});
+    return data;
 };
-
-// return data.find({}, {sort: {score: -1}});
