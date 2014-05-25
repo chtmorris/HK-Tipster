@@ -4,6 +4,7 @@
     "iron-router": {},
     "slick": {},
     "accounts-ui-bootstrap-3": {},
-    "jquery-ui": {}
+    "jquery-ui": {},
+    "npm": {}
   }
 }
