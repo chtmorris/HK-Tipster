@@ -5,6 +5,7 @@
     "slick": {},
     "accounts-ui-bootstrap-3": {},
     "jquery-ui": {},
-    "npm": {}
+    "npm": {},
+    "kadira": {}
   }
 }
