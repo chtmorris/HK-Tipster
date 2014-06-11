@@ -234,6 +234,14 @@ WHITE:  - #FFF
 */  /*height: 300px !important;*/
 }
 
+.raceday-graph{
+  margin-left: -35px;
+}
+
+.tips-title{
+  margin-left: 50px;
+}
+
 
 /*----- HORSE PICKS -----*/
 .horse-icon-profile{
