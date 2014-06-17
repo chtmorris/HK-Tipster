@@ -1,6 +1,6 @@
 if (Meteor.isClient) {
   Template.login.greeting = function () {
-    return "Welcome to hktipster.";
+    return "Welcome to Ascot Tipster.";
   };
 
   Template.login.events({
@@ -17,4 +17,3 @@ if (Meteor.isServer) {
     // code to run on server at startup
   });
 }
-
